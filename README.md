@@ -1,31 +1,68 @@
 # prompt
-Crea una aplicación en Flutter (Dart) en un solo archivo llamado main.dart.
-La aplicación debe representar una empresa financiera llamada "FinanTrack".
-Debe incluir un Scaffold con un Drawer (menú lateral).
-El Drawer debe tener un encabezado con:
-* Imagen de avatar desde internet relacionada con finanzas (empresa o gráfico financiero)
-* Nombre de la empresa: FinanTrack
-* Dirección: Av. Finanzas 123, Ciudad
-* Teléfono: 6561234567
-* Correo: [contacto@finantrack.com](mailto:contacto@finantrack.com)
-Debajo del encabezado, incluir 4 opciones usando ListTile, cada una con icono, texto y acción de navegación:
-1. Portafolio (icono: account_balance_wallet)
-2. Inversiones (icono: trending_up)
-3. Gastos (icono: money_off)
-4. Perfil (icono: person)
-Cada opción debe navegar a una pantalla diferente utilizando rutas nombradas definidas en MaterialApp.
-Las rutas deben ser:
-* '/portafolio'
-* '/inversiones'
-* '/gastos'
-* '/perfil'
-Cada pantalla debe contener:
-* Un AppBar con el nombre de la sección
-* Un cuerpo con una imagen centrada de 200x200 píxeles
-* La imagen debe cargarse desde internet y estar relacionada con el tema (finanzas, inversión, dinero, etc.)
-La navegación debe realizarse utilizando Navigator.pushNamed.
-El diseño debe seguir Material Design, ser limpio y funcional.
-Todo el código debe estar en un solo archivo main.dart, completamente funcional y listo para ejecutarse en DartPad.
+Toma la siguiente aplicación Flutter existente y refactorízala en una estructura modular separando cada pantalla en archivos independientes.
+La aplicación se llama "FinanTrack" y actualmente todo está en un solo archivo.
+OBJETIVO:
+Separar el código en múltiples archivos manteniendo la funcionalidad completa, usando buenas prácticas de Flutter.
+ESTRUCTURA DE CARPETAS:
+lib/
+├── main.dart
+└── LasPaginas/
+├── inicio.dart
+├── portafolio.dart
+├── inversiones.dart
+├── gastos.dart
+└── perfil.dart
+REQUISITOS:
+1. main.dart:
+* Debe contener:
+  * MaterialApp
+  * Configuración de rutas nombradas
+  * Importación de todas las pantallas desde la carpeta "LasPaginas"
+* No debe contener lógica de UI compleja, solo estructura principal
+* Mantener rutas:
+  * '/'
+  * '/portafolio'
+  * '/inversiones'
+  * '/gastos'
+  * '/perfil'
+2. inicio.dart:
+* Debe contener:
+  * PantallaInicio
+  * MenuLateral (Drawer completo)
+* Mantener diseño actual del Drawer:
+  * Encabezado con Container
+  * Imagen desde GitHub
+  * Información de FinanTrack
+* Mantener navegación con Navigator.pushNamed
+3. portafolio.dart:
+* Contiene PantallaPortafolio
+* Imagen centrada 200x200 desde la URL actual
+4. inversiones.dart:
+* Contiene PantallaInversiones
+* Imagen centrada 200x200 desde la URL actual
+5. gastos.dart:
+* Contiene PantallaGastos
+* Imagen centrada 200x200 desde la URL actual
+6. perfil.dart:
+* Contiene PantallaPerfil
+* Imagen centrada 200x200 desde la URL actual
+IMPORTANTE:
+* Mantener exactamente las mismas URLs de imágenes
+* Mantener ClipRRect con bordes redondeados
+* Mantener navegación con rutas nombradas
+* Mantener Drawer funcional
+* NO modificar el diseño visual actual
+BUENAS PRÁCTICAS:
+* Usar imports correctos entre archivos
+* Usar const donde sea posible
+* Código limpio y organizado
+* Sin errores de compilación
+RESULTADO ESPERADO:
+* Proyecto funcional dividido en múltiples archivos
+* main.dart conectado correctamente con todas las pantallas
+* Compatible con Flutter y Firebase Studio
+* Sin errores de navegación ni RenderFlex overflow
+A continuación, genera todos los archivos completos con su código correspondiente.
 
 # myweb
 ![alt text](image.png)
